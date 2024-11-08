@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - I Love You</title>
+    <style>
+        body {
+            background-color: #f9e7fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #4a148c;
+            text-align: center;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #e3f2fd;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 2em;
+            color: #ff4081;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #004d40;
+        }
+        .heart {
+            font-size: 2em;
+            color: red;
+            animation: pulse 1s infinite;
+            margin-top: 20px;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" id="loginDiv">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username" class="input-field">
+        <input type="password" id="password" placeholder="Password" class="input-field">
+        <button class="login-btn" onclick="login()">Login</button>
+    </div>
+    <div class="login-container" id="messageDiv" style="display: none;">
+        <h1>I Love You</h1>
+        <h2>I want an answer🥲</h2>
+        <h3>Can't you love me?</h3>
+        <h4>~~~~~~~~~~~~~~~~~~</h4>
+        <p>Just give the only correct answer</p>
+        <div class="heart">❤️‍🩹</div>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            if (username === "Akarsha" && password === "Akarsha1#") {
+                document.getElementById("loginDiv").style.display = "none";
+                document.getElementById("messageDiv").style.display = "block";
+            } else {
+                alert("Before logging into this page, think again");
+            }
+        }
+    </script>
+</body>
+</html>
+
+
